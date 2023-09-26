@@ -1,6 +1,6 @@
 # ALCD Library
 
-The **ALCD** (Advanced LCD) library is a C library designed for use with various microcontroller platforms to control and interact with alphanumeric LCD displays. This library provides functions to initialize the LCD, clear its display, set the cursor position, print characters and strings, and handle numeric and formatted output. It is highly configurable and can be adapted to different hardware setups.
+The **ALCD** (Alphanumeric LCD) library is a C library designed for use with various microcontroller platforms to control and interact with alphanumeric LCD displays. This library provides functions to initialize the LCD, clear its display, set the cursor position, print characters and strings, and handle numeric and formatted output. It is highly configurable and can be adapted to different hardware setups.
 
 ## Table of Contents
 
