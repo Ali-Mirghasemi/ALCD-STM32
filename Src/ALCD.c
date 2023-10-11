@@ -209,17 +209,17 @@ static void ALCD_write(ALCD_RState rs, uint8_t val, uint32_t timeout) {
   // RW LOW
   HAL_GPIO_WritePin(ALCD_RW_GPIO, ALCD_RW_PIN, GPIO_PIN_RESET);
   // Write High Nibble (4x Bit)
-  HAL_GPIO_WritePin(ALCD_D7_GPIO, ALCD_D7_PIN, byte.D7);
-  HAL_GPIO_WritePin(ALCD_D6_GPIO, ALCD_D6_PIN, byte.D6);
-  HAL_GPIO_WritePin(ALCD_D5_GPIO, ALCD_D5_PIN, byte.D5);
-  HAL_GPIO_WritePin(ALCD_D4_GPIO, ALCD_D4_PIN, byte.D4);
+  HAL_GPIO_WritePin(ALCD_D7_GPIO, ALCD_D7_PIN, (GPIO_PinState) byte.D7);
+  HAL_GPIO_WritePin(ALCD_D6_GPIO, ALCD_D6_PIN, (GPIO_PinState) byte.D6);
+  HAL_GPIO_WritePin(ALCD_D5_GPIO, ALCD_D5_PIN, (GPIO_PinState) byte.D5);
+  HAL_GPIO_WritePin(ALCD_D4_GPIO, ALCD_D4_PIN, (GPIO_PinState) byte.D4);
   // Trigger
   ALCD_trigger();
   // Write Low Nibble (4x Bit)
-  HAL_GPIO_WritePin(ALCD_D7_GPIO, ALCD_D7_PIN, byte.D3);
-  HAL_GPIO_WritePin(ALCD_D6_GPIO, ALCD_D6_PIN, byte.D2);
-  HAL_GPIO_WritePin(ALCD_D5_GPIO, ALCD_D5_PIN, byte.D1);
-  HAL_GPIO_WritePin(ALCD_D4_GPIO, ALCD_D4_PIN, byte.D0);
+  HAL_GPIO_WritePin(ALCD_D7_GPIO, ALCD_D7_PIN, (GPIO_PinState) byte.D3);
+  HAL_GPIO_WritePin(ALCD_D6_GPIO, ALCD_D6_PIN, (GPIO_PinState) byte.D2);
+  HAL_GPIO_WritePin(ALCD_D5_GPIO, ALCD_D5_PIN, (GPIO_PinState) byte.D1);
+  HAL_GPIO_WritePin(ALCD_D4_GPIO, ALCD_D4_PIN, (GPIO_PinState) byte.D0);
   // Trigger
   ALCD_trigger();
   // Wait
@@ -238,10 +238,10 @@ static void ALCD_write4Bit(ALCD_RState rs, uint8_t val) {
   // RW LOW
   HAL_GPIO_WritePin(ALCD_RW_GPIO, ALCD_RW_PIN, GPIO_PIN_RESET);
   // Write High Nibble (4x Bit)
-  HAL_GPIO_WritePin(ALCD_D7_GPIO, ALCD_D7_PIN, byte.D7);
-  HAL_GPIO_WritePin(ALCD_D6_GPIO, ALCD_D6_PIN, byte.D6);
-  HAL_GPIO_WritePin(ALCD_D5_GPIO, ALCD_D5_PIN, byte.D5);
-  HAL_GPIO_WritePin(ALCD_D4_GPIO, ALCD_D4_PIN, byte.D4);
+  HAL_GPIO_WritePin(ALCD_D7_GPIO, ALCD_D7_PIN, (GPIO_PinState) byte.D7);
+  HAL_GPIO_WritePin(ALCD_D6_GPIO, ALCD_D6_PIN, (GPIO_PinState) byte.D6);
+  HAL_GPIO_WritePin(ALCD_D5_GPIO, ALCD_D5_PIN, (GPIO_PinState) byte.D5);
+  HAL_GPIO_WritePin(ALCD_D4_GPIO, ALCD_D4_PIN, (GPIO_PinState) byte.D4);
   // Trigger
   ALCD_trigger();
 }
